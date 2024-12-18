@@ -1,0 +1,474 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel='stylesheet' href='style.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href-"https://fonts.gstatic.com" crossorigin>
+    <link href-"https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700; 800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href-"https://fonts.gstatic.com" crossorigin>
+    <link href-"https://fonts.googleapis.com/css2?family=Tinos:wght@400;700&display=swap" rel="stylesheet">
+    <title>daje</title>
+</head>
+<body>
+
+<div class='header'>
+    <div class='container'>
+        <div class='header-line'>
+            <div class='header-logo'>
+                <img src="logo.png" alt="">
+            </div>
+       
+            <div class='nav'>
+                <a class='nav-item' href="#main">главная</a>
+                <a class='nav-item' href="#meal">меню</a>
+                <a class='nav-item' href="#history">о нас</a>
+                <a class='nav-item' href="#" id="openFormLink">бронь</a>
+            </div>
+
+            <div class='cart'>
+                <a href="#">
+                    <img class='cart-img' src="cart.png" alt="">
+                </a>
+            </div>
+
+            <div class='phone'>
+                <div class='phone-holder'>
+                    <div class='phone-img'>
+                        <img src="phone.png" alt="">
+                    </div>
+                
+                    <div class='number'><a class='num' href='#'>+993-633-00-52</a></div> 
+                </div>
+                
+                <div class='phone-text'>
+                    Свяжитесь с нами для <br> бронирования
+                </div>
+            </div>
+
+            <div class="btn">
+                <a class='button' href='#'>заказ столика</a>
+            </div>
+
+            <div class="burger-menu">
+                
+                <button id="burger">
+                    <img src="burger-img.png" alt="">
+                </button>
+
+                <div id="list" class="burger-slide disp">
+                    <a class='nav-item block' href="#main">главная</a>
+                    <a class='nav-item block' href="#meal">меню</a>
+                    <a class='nav-item block' href="#history">о нас</a>
+                    <a class='nav-item block' href="#" id="openFormLink2">бронь</a>
+                </div>
+            
+            </div>
+
+
+        
+        </div>
+
+        <div class='header-down'>
+
+            <div id="main" class='header-title'>
+                Добро пожаловать в
+
+                <div class='header-subtitle'>
+                    Наш ресторан
+                </div>
+
+                <div class='header-suptitle'>
+                    ДОМ ЛУЧШЕЙ ЕДЫ
+                </div>
+
+                <div class='header-bth'>
+                    <a href='#menu' class='header-button'>VIEW MENU</a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    
+</div>
+
+
+
+<div id="booking-modal">
+    <div id="booking-form-container">
+        <span id="close-modal">&times;</span> 
+        <h2>Бронирование столика</h2>
+        <form id="booking-form" class="booking-form">
+            <label for="name">Ваше имя:</label>
+            <input type="text" id="name" name="name" required> 
+            
+            <label for="phone">Телефон:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="1234567890" required>
+            
+            <label for="date">Дата:</label>
+            <input type="date" id="date" name="date" required>
+            
+            <label for="time">Время:</label>
+            <input type="time" id="time" name="time" required> 
+            
+            <label for="guests">Количество гостей:</label>
+            <select id="guests" name="guests" required>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+            </select> 
+            
+            <button type="submit">Забронировать</button>
+        </form>
+    </div>
+</div>
+
+<div id="booking-confirmation-modal" class="booking-confirmation-modal">
+    <div id="confirmation-content">
+        <h3>Бронирование подтверждено!</h3>
+        <p>Спасибо, <span id="user-name"></span>! Ваш столик забронирован на <span id="user-date"></span> в <span id="user-time"></span>.</p>
+        <button id="close-confirmation">Закрыть</button>
+    </div>
+</div>
+
+<div class='cards'>
+    <div class='container'>
+
+        <div class='cards-holder'>
+
+            <div class='card'>
+                
+                <div class='card-image'>
+                    <img class='card-img' src='card.png'>
+                </div>
+
+                <div class='card-title'>
+                    Магическая <span>атмосфера</span>
+                </div>
+
+                <div class='card-desc'>
+                    В нашем заведении царит магическая атмосфера
+                    наполненная вкусными ароматами
+                </div>
+            
+            </div>
+
+            <div class='card'>
+                
+                <div class='card-image'>
+                    <img class='card-img' src='card.png'>
+                </div>
+
+                <div class='card-title'>
+                    Лучшее качество <span>еды</span>
+                </div>
+
+                <div class='card-desc'>
+                Качество нашей еды - отменое!
+                </div>
+            
+            </div>
+
+            <div class='card'>
+                
+                <div class='card-image'>
+                    <img class='card-img' src='card.png'>
+                </div>
+
+                <div class='card-title'>
+                    Недорогая <span>еда</span>
+                </div>
+
+                <div class='card-desc'>
+                    Стоимость нашей еды зависит только от ее количества. Качество всегда на высоте!
+                </div>
+            
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<div id="history" class='history'>
+
+    <div class='container'>
+        
+        <div class='history-holder'>
+            <div class='history-info'>
+                <div class='history-title'>
+                    Наша <span>История</span>
+                </div>
+
+                <div class='history-desc'>
+                Как и у любого другого самобытного места, у нас есть своя, особая история. Идея ресторана пришла основателям неожиданно. Во время прогулки по лесу создатель нашего ресторана застрял в сотнях километров от ближайшего населенного пункта. Вдали от цивилизации и связи им пришлось навремя обустровать себе нехитрый быт, добывать и готовить себе еду.
+                </div>
+
+
+                <div class='history-number'>
+                    <div class='number-item'>
+                        93 <span>Напитки</span>
+                    </div>
+                    
+                    <div class='number-item'>
+                        206 <span>Еда</span>
+                    </div>
+
+                    <div class='number-item'>
+                        71 <span>Закуски</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class='history-images'>
+                <img class='images-1' src="1.jpg" alt="">
+                <img class='images-2' src="2.jpg" alt="">
+                <img class='images-3' src="3.jpg" alt="">
+        </div>
+        </div>
+   
+    </div>
+
+</div>
+
+
+<div class='black-block'>
+
+    <div class='container'>
+        <div class='block-holder'>
+            <div class='left'>
+                <div class='left-title'>
+                    Отпразднуйте в одном из <br> самых лучших ресторанов.
+                </div>
+
+                <div class='left-text'>
+                    Только в этом месяце бизнес-ланч от 250 ₽
+                </div>
+            </div>
+
+            <div class='right'>
+                <div class='right-button'>
+                    <a href='#' class='right-btn'>ЗАКАЗ СТОЛИКА</a>
+                </div>
+            </div>
+        </div>
+   
+    </div>
+
+</div>
+
+<div id="meal" class='dishes'>
+
+    <div class='container'>
+
+        <div class='dishes-title'>
+            Наши <span>Блюда</span>
+        </div>
+
+        <div class='burgers'>
+            <dib class='burgers-image'>
+                <img src='pizza.jpg' class='pizza'>
+            </dib>
+
+            <div class='burgers-items'>
+                <div class="burgers-item">
+                    <img src="burger.jpg" class="burger">
+                    <div class="burger-text">
+                        Гамбургер мини ---------- 220 ₽
+                    </div> 
+                </div>
+
+                <div class='burgers-item'>
+                    <img src="salad.jpg" class="burger">
+                    <div class="burger-text">
+                        Салат Цезарь ------------- 320 ₽
+                    </div> 
+                </div>
+
+                <div class='burgers-item'>
+                    <img src="ramen.jpg" class="burger">
+                    <div class="burger-text">
+                        Паста Карбонара -------- 420 ₽
+                    </div> 
+                </div>
+            </div>
+        </div>
+    
+    </div>
+
+</div>
+
+
+<div id="menu" class="menu">
+
+    <div class="container">
+        
+        <div class="menu-title">
+            Наше Меню
+        </div>
+
+        <div class="menu-items">
+
+            <div class="menu-item">
+                <div class="menu-image">
+                    <img src="burger-i.jpg" class="menu-img">
+                </div>
+
+                <div class="menu-text">
+                    Гамбургер макси
+                </div>
+
+                <div class="menu-subtext">
+                    Максимально толстый <br> слой мяса
+                </div>
+
+                <div class="menu-button">
+                    <a href="#" class="menu-btn">ЗАКАЗАТЬ</a>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <div class="menu-image">
+                    <img src="pizza-i.jpg" class="menu-img">
+                </div>
+
+                <div class="menu-text">
+                    Пицца
+                </div>
+
+                <div class="menu-subtext">
+                    Пицца с курицей, грибами <br> и трюфельным маслом
+                </div>
+
+                <div class="menu-button">
+                    <a href="#" class="menu-btn">ЗАКАЗАТЬ</a>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <div class="menu-image">
+                    <img src="ramen-i.jpg" class="menu-img">
+                </div>
+
+                <div class="menu-text">
+                    Кальмар фри
+                </div>
+
+                <div class="menu-subtext">
+                    Кальмар фри <br> с соусом том ям
+                </div>
+
+                <div class="menu-button">
+                    <a href="#" class="menu-btn">ЗАКАЗАТЬ</a>
+                </div>
+            </div>
+        
+        </div>
+
+    </div>
+
+</div>
+
+<div class="coment">
+
+    <div class="container">
+
+        <div class="coment-text">
+            Я надолго запомню мой День рождения, проведённый в этом ресторане! Кусочек родной Грузии!!! Отдельное спасибо за комплепент в виде фруктовой тарелки. Будем рекомендовать этот ресторан своим друзьям и родственникам также за рубежом, путешествующих в Санкт-Петербург!!!
+        </div>
+
+        <div class="coment-image">
+            <img src="face.png" class="coment-img">
+        </div>
+
+        <div class="coment-type">
+            Посетитель
+        </div>
+
+        <div class="coment-name">
+            Николай
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<div class="galery">
+
+    <div class="container">
+
+        <div class="galery-title">
+            Галерия <span>Блюд</span>
+        </div>
+
+        <div class="galery-content">
+
+            <div class="galery-left">
+
+                <div class="galery-up">
+                    <img class="img-gal high" src="10.jpg">
+                </div>
+
+                <div class="galery-down">
+                    <img class="img-gal" src="20.jpg">
+                    <img class="img-gal" src="30.jpg">
+                </div>
+            
+            </div>
+
+            <div class="galery-right">
+
+                <div class="galery-up">
+                    <img class="img-gal" src="20.jpg">
+                    <img class="img-gal" src="30.jpg">
+                </div>
+    
+                <div class="galery-down">
+                    <img class="img-gal high" src="10.jpg">
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="cook">
+
+    <div class="container">
+
+        <div class="cook-title">
+            Наши <span>Повара</span>
+        </div>
+
+        <div class="cook-content">
+            <img src="1c.jpg">
+            <img src="2c.jpg">
+            <img src="3c.jpg">
+        </div>
+
+    </div>
+
+</div>
+
+<div class="footer">
+    Copyright 2024
+</div>
+
+<a href="#top" id="back-to-top" class="back-to-top" title="Back to top">^</a>
+
+<script src="app.js"></script>
+
+</body>
+</html>
